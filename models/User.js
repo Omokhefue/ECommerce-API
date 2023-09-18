@@ -1,17 +1,15 @@
 const { isEmail } = require("validator");
 const mongoose = require("mongoose");
 
-
-
 const UserSchema = new mongoose.Schema(
   {
     firstname: {
       type: String,
-      required: true,
+      required: [true, "please enter a first name"],
     },
     lastName: {
       type: String,
-      required: true,
+      required: [true, "please enter a last name"],
     },
     image: {
       type: String,
@@ -31,10 +29,23 @@ const UserSchema = new mongoose.Schema(
     role: {
       type: String,
       enum: ["user", "admin", "site-owner"],
-      default: "user",
     },
     wishlist: {
       type: Array,
+    },
+    address: {
+      type: String,
+    },
+    phone: {
+      type: String,
+      required: [true, "please add a phone number"],
+      validate: {
+        validator: function (value) {
+          const phoneRegex = /^(?:\+234|0)[789]\d{9}$/;
+          return phoneRegex.test(value);
+        },
+        message: "Invalid Nigerian phone number",
+      },
     },
     resetPasswordToken: String,
     resetPasswordExpire: Date,
@@ -48,7 +59,5 @@ const UserSchema = new mongoose.Schema(
   },
   { timestamps: true }
 );
-
-
 
 module.exports = mongoose.model("User", UserSchema);
