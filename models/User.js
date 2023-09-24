@@ -1,8 +1,9 @@
 const { isEmail } = require("validator");
 const mongoose = require("mongoose");
+const slugify = require("slugify");
 
 const bcrypt = require("bcryptjs");
-const crypto = require('crypto')
+const crypto = require("crypto");
 const jwt = require("jsonwebtoken");
 const otpGenerator = require("otp-generator");
 const sendEmail = require("../utils/sendEmail");
@@ -17,6 +18,15 @@ const UserSchema = new mongoose.Schema(
     lastname: {
       type: String,
       required: [true, "please enter a last name"],
+    },
+    fullUsername: String,
+    slug: {
+      type: String,
+      unique: true, // Ensure that slugs are unique
+      // required: true,
+    },
+    slugCounter: {
+      type: Number,
     },
     image: {
       type: String,
@@ -36,7 +46,8 @@ const UserSchema = new mongoose.Schema(
     role: {
       type: String,
       enum: ["customer", "admin", "site-owner"],
-      required:true
+      default: "customer",
+      required: true,
     },
     wishlist: {
       type: Array,
@@ -74,12 +85,48 @@ const UserSchema = new mongoose.Schema(
 );
 
 UserSchema.pre("save", async function (next) {
-  if (!this.isModified("password")) {
-    next();
+  // Declare and initialize the slug variable
+  let slug = "";
+  this.fullUsername = `${this.firstname} ${this.lastname}`;
+
+  // Check if the firstname, lastname, or password has been modified, or if the document is new
+  if (
+    this.isModified("firstname") ||
+    this.isModified("lastname") ||
+    this.isNew
+  ) {
+    const existingUser = await this.constructor.findOne(
+      { fullUsername: this.fullUsername }, // Filter by fullUsername
+      {}, // Projection (empty to return all fields)
+      { sort: { slugCounter: -1 } } // Sort by slugCounter in descending order
+    );
+
+    if (existingUser) {
+      // Increment the counter
+      this.slugCounter = existingUser.slugCounter + 1;
+    } else {
+      // Initialize the counter
+      this.slugCounter = 1;
+    }
+
+    // Generate the slug by joining fullUsername and counter
+    const fullUsernameWithCounter = `${this.fullUsername} ${this.slugCounter}`;
+    slug = slugify(fullUsernameWithCounter, {
+      lower: true,
+      remove: /[*+~.()'"!:@]/g,
+    });
+    this.slug = slug;
   }
-  const salt = bcrypt.genSaltSync(10);
-  this.password = bcrypt.hashSync(this.password, salt);
+
+  if (this.isNew || this.isModified("password")) {
+    // Hash the password
+    const salt = bcrypt.genSaltSync(10);
+    this.password = bcrypt.hashSync(this.password, salt);
+  }
+
+  next();
 });
+
 UserSchema.statics.login = async function (email, password, next) {
   if (!email || !password) {
     return next(new ErrorResponse("Please provide an email and password", 400));

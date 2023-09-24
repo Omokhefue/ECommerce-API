@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+const slugify = require('slugify')
 
 const categorySchema = new mongoose.Schema(
   {
@@ -12,7 +13,7 @@ const categorySchema = new mongoose.Schema(
     slug: {
       type: String,
       unique: true, // Ensure that slugs are unique
-      required: true,
+      // required: true,
     },
     parentCategory: {
       type: mongoose.Schema.Types.ObjectId,
@@ -35,5 +36,15 @@ const categorySchema = new mongoose.Schema(
   },
   { timestamps: true }
 );
+
+
+categorySchema.pre("save", function (next) {
+  // Check if the name has been modified or if the document is new
+  if (this.isModified("name") || this.isNew) {
+    // Use slugify to generate a slug from the name field
+    this.slug = slugify(this.name, { lower: true });
+  }
+  next();
+});
 
 module.exports = mongoose.model("Category", categorySchema);
