@@ -1,0 +1,124 @@
+[
+  {
+    "_id": "60b79d8c5fca174234f670e2",
+    "name": "Electronics",
+    "description": "Explore the latest electronic gadgets and devices. From smartphones to smart home appliances, find everything here.",
+    "parentCategory": null,
+    "subcategories": ["60b79d8c5fca174234f670e9", "60b79d8c5fca174234f670ea"]
+  },
+  {
+    "_id": "60b79d8c5fca174234f670e3",
+    "name": "Clothing",
+    "description": "Upgrade your wardrobe with a wide range of clothing and apparel options. Stay fashionable and comfortable.",
+    "parentCategory": null,
+    "subcategories": ["60b79d8c5fca174234f670eb", "60b79d8c5fca174234f670ec"]
+  },
+  {
+    "_id": "60b79d8c5fca174234f670e4",
+    "name": "Home & Kitchen",
+    "description": "Enhance your living space with quality home and kitchen products. Discover stylish and functional items for your home.",
+    "parentCategory": null,
+    "subcategories": ["60b79d8c5fca174234f670ed", "60b79d8c5fca174234f670ee"]
+  },
+  {
+    "_id": "60b79d8c5fca174234f670e5",
+    "name": "Books",
+    "description": "Dive into the world of literature with our extensive collection of books. From bestsellers to classics, find your next read here.",
+    "parentCategory": null,
+    "subcategories": ["60b79d8c5fca174234f670ef", "60b79d8c5fca174234f670f0"]
+  },
+  {
+    "_id": "60b79d8c5fca174234f670e6",
+    "name": "Sports & Outdoors",
+    "description": "Fuel your passion for sports and outdoor activities. Browse a variety of equipment and gear for your favorite pursuits.",
+    "parentCategory": null,
+    "subcategories": ["60b79d8c5fca174234f670f1", "60b79d8c5fca174234f670f2"]
+  },
+  {
+    "_id": "60b79d8c5fca174234f670e7",
+    "name": "Beauty & Personal Care",
+    "description": "Take care of your skin, hair, and overall beauty. Discover a range of grooming and personal care products.",
+    "parentCategory": null,
+    "subcategories": ["60b79d8c5fca174234f670f3", "60b79d8c5fca174234f670f4"]
+  },
+  {
+    "_id": "60b79d8c5fca174234f670e8",
+    "name": "Toys & Games",
+    "description": "Find joy in playtime with our selection of toys and games. From educational toys to board games, fun awaits.",
+    "parentCategory": null,
+    "subcategories": ["60b79d8c5fca174234f670f5", "60b79d8c5fca174234f670f6"]
+  },
+
+  {
+    "_id": "60b79d8c5fca174234f670e9",
+    "name": "Smartphones",
+    "description": "Discover the latest smartphones with cutting-edge technology.",
+    "parentCategory": "60b79d8c5fca174234f670e2",
+    "subcategories": [],
+    "products": ["60b79d8c5fca174234f67102", "60b79d8c5fca174234f67103"]
+  },
+  {
+    "_id": "60b79d8c5fca174234f670ea",
+    "name": "Home Appliances",
+    "description": "Upgrade your home with smart appliances for convenience and energy efficiency.",
+    "parentCategory": "60b79d8c5fca174234f670e2",
+    "subcategories": [],
+    "products": ["60b79d8c5fca174234f67104", "60b79d8c5fca174234f67105"]
+  },
+  {
+    "_id": "60b79d8c5fca174234f670eb",
+    "name": "Men's Clothing",
+    "description": "Shop for a wide range of men's clothing styles, from casual to formal wear.",
+    "parentCategory": "60b79d8c5fca174234f670e3",
+    "subcategories": [],
+    "products": [
+      "60b79d8c5fca174234f67106",
+      "60b79d8c5fca174234f67107",
+      "60b79d8c5fca174234f67108"
+    ]
+  },
+  {
+    "_id": "60b79d8c5fca174234f670ec",
+    "name": "Women's Clothing",
+    "description": "Explore fashionable clothing options for women, including dresses, tops, and more.",
+    "parentCategory": "60b79d8c5fca174234f670e3",
+    "subcategories": [],
+    "products": [
+      "60b79d8c5fca174234f67109",
+      "60b79d8c5fca174234f6710a",
+      "60b79d8c5fca174234f6710b"
+    ]
+  },
+  {
+    "_id": "60b79d8c5fca174234f670ed",
+    "name": "Cookware",
+    "description": "Equip your kitchen with high-quality cookware and kitchen gadgets.",
+    "parentCategory": "60b79d8c5fca174234f670e4",
+    "subcategories": [],
+    "products": ["60b79d8c5fca174234f6710c", "60b79d8c5fca174234f6710d"]
+  },
+  {
+    "_id": "60b79d8c5fca174234f670ee",
+    "name": "Furniture",
+    "description": "Furnish your home with stylish and functional furniture pieces.",
+    "parentCategory": "60b79d8c5fca174234f670e4",
+    "subcategories": [],
+    "products": ["60b79d8c5fca174234f6710e", "60b79d8c5fca174234f6710f"]
+  },
+  {
+    "_id": "60b79d8c5fca174234f670ef",
+    "name": "Fiction",
+    "description": "Immerse yourself in fictional worlds with captivating novels and stories.",
+    "parentCategory": "60b79d8c5fca174234f670e5",
+    "subcategories": [],
+    "products": ["60b79d8c5fca174234f67110", "60b79d8c5fca174234f67111"]
+  },
+  {
+    "_id": "60b79d8c5fca174234f670f0",
+    "name": "Non-Fiction",
+    "description": "Expand your knowledge with informative non-fiction books on various subjects.",
+    "parentCategory": "60b79d8c5fca174234f670e5",
+    "subcategories": [],
+    "products": ["60b79d8c5fca174234f67112", "60b79d8c5fca174234f67113"]
+  }
+]
