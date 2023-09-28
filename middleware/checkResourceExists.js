@@ -3,8 +3,12 @@ const ErrorResponse = require("../utils/errorResponse"); // Import your ErrorRes
 
 const getResourceModel = (resourceType) => {
   switch (resourceType) {
-    case "User":
+    case "user":
       return require("../models/User");
+    case "category":
+      return require("../models/Category");
+    case "product":
+      return require("../models/Product");
     // check for whichever model exist in youtr api application
     default:
       return null;
@@ -14,7 +18,9 @@ const getResourceModel = (resourceType) => {
 // Middleware to check if the resource exists
 exports.checkResourceExists = (resourceType) => {
   return asyncHandler(async (req, res, next) => {
-    const resourceId = req.params[`${resourceType}Id`]; // Extract the resource identifier from the request
+    let resource;
+    const resourceSlug = req.params[`${resourceType}Slug`]; // Extract the resource identifier from the request
+    const resourceSlugCounter = req.params[`${resourceType}SlugCounter`]; // Extract the resource identifier from the request
     // Dynamically determine the model to use based on the resourceType
     const Model = getResourceModel(resourceType);
     if (!Model) {
@@ -22,7 +28,15 @@ exports.checkResourceExists = (resourceType) => {
         new ErrorResponse(`Invalid resource type: ${resourceType}`, 400)
       );
     }
-    const resource = await Model.findOne({ _id: resourceId }); // Replace with your resource lookup logic
+console.log(resourceSlug,resourceSlugCounter)
+    if (resourceSlugCounter) {
+      resource = await Model.findOne({
+        slug: resourceSlug,
+        slugCounter: resourceSlugCounter,
+      });
+    } else {
+      resource = await Model.findOne({ slug: resourceSlug }); // Replace with your resource lookup logic
+    }
 
     if (!resource) {
       return next(new ErrorResponse(`${resourceType} not found`, 404));
@@ -30,7 +44,6 @@ exports.checkResourceExists = (resourceType) => {
 
     // Attach the resource to the request for later middleware to use if needed
     req.resource = resource;
-
     next();
   });
 };
