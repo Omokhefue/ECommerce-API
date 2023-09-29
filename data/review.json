@@ -1,0 +1,178 @@
+[
+  {
+    "_id": "60b79d8c5fca174234f6710b",
+    "user": "612e2711b33c8b89fc65c691",
+    "product": "60b79d8c5fca174234f67102",
+    "rating": 4,
+    "title": "Great Smartphone!", 
+    "text": "I love this smartphone. It has amazing features and works flawlessly."
+  },
+  {
+    "_id": "60b79d8c5fca174234f6710c",
+    "user": "612e2711b33c8b89fc65c691",
+    "product": "60b79d8c5fca174234f67102",
+    "rating": 4,
+    "title": "Great Smartphone!",
+    "text": "I love this smartphone. It has amazing features and works flawlessly."
+  },
+  {
+    "_id": "60b79d8c5fca174234f6710d",
+    "user": "612e2711b33c8b89fc65c691",
+    "product": "60b79d8c5fca174234f67103",
+    "rating": 5,
+    "title": "Fantastic Flagship!",
+    "text": "This flagship smartphone is absolutely fantastic. It exceeded my expectations."
+  },
+  {
+    "_id": "60b79d8c5fca174234f6710e",
+    "user": "612e2711b33c8b89fc65c692",
+    "product": "60b79d8c5fca174234f67104",
+    "rating": 4,
+    "title": "Good Refrigerator",
+    "text": "This refrigerator is spacious and energy-efficient. A great addition to my kitchen."
+  },
+  {
+    "_id": "60b79d8c5fca174234f6710f",
+    "user": "612e2711b33c8b89fc65c693",
+    "product": "60b79d8c5fca174234f67105",
+    "rating": 5,
+    "title": "Keeps Groceries Fresh!",
+    "text": "This high-capacity refrigerator is amazing. It keeps my groceries fresh for longer."
+  },
+  {
+    "_id": "60b79d8c5fca174234f67110",
+    "user": "612e2711b33c8b89fc65c694",
+    "product": "60b79d8c5fca174234f67106",
+    "rating": 3,
+    "title": "Decent Shirt",
+    "text": "This men's shirt is decent. It's comfortable but could use more style."
+  },
+  {
+    "_id": "60b79d8c5fca174234f67111",
+    "user": "612e2711b33c8b89fc65c695",
+    "product": "60b79d8c5fca174234f67107",
+    "rating": 4,
+    "title": "Stylish Pants!",
+    "text": "These men's pants are stylish and comfortable. I'm happy with my purchase."
+  },
+  {
+    "_id": "60b79d8c5fca174234f67112",
+    "user": "612e2711b33c8b89fc65c696",
+    "product": "60b79d8c5fca174234f67108",
+    "rating": 5,
+    "title": "Durable Shoes",
+    "text": "These men's shoes are both durable and fashionable. I love the brown color."
+  },
+  {
+    "_id": "60b79d8c5fca174234f67113",
+    "user": "612e2711b33c8b89fc65c692",
+    "product": "60b79d8c5fca174234f67109",
+    "rating": 4,
+    "title": "Elegant Dress",
+    "text": "This women's dress is elegant and versatile. I received many compliments."
+  },
+  {
+    "_id": "60b79d8c5fca174234f67114",
+    "user": "612e2711b33c8b89fc65c693",
+    "product": "60b79d8c5fca174234f6710a",
+    "rating": 5,
+    "title": "Stylish Top!",
+    "text": "This women's top is stylish and comfortable. It's my new favorite."
+  },
+  {
+    "_id": "60b79d8c5fca174234f67115",
+    "user": "612e2711b33c8b89fc65c694",
+    "product": "60b79d8c5fca174234f6710b",
+    "rating": 3,
+    "title": "Not So Comfortable",
+    "text": "These women's shoes look chic, but they're not as comfortable as I expected."
+  },
+  {
+    "_id": "60b79d8c5fca174234f67116",
+    "user": "612e2711b33c8b89fc65c695",
+    "product": "60b79d8c5fca174234f67102",
+    "rating": 4,
+    "title": "Impressive Smartphone!",
+    "text": "I'm impressed with this smartphone's performance and features. Well worth the price."
+  },
+  {
+    "_id": "60b79d8c5fca174234f67117",
+    "user": "612e2711b33c8b89fc65c691",
+    "product": "60b79d8c5fca174234f67103",
+    "rating": 5,
+    "title": "Top-Notch Flagship!",
+    "text": "This flagship smartphone is top-notch. It's fast, powerful, and the camera is amazing."
+  },
+  {
+    "_id": "60b79d8c5fca174234f67118",
+    "user": "612e2711b33c8b89fc65c692",
+    "product": "60b79d8c5fca174234f67104",
+    "rating": 4,
+    "title": "Spacious Refrigerator",
+    "text": "This refrigerator has ample space. It's perfect for a large family like mine."
+  },
+  {
+    "_id": "60b79d8c5fca174234f67119",
+    "user": "612e2711b33c8b89fc65c693",
+    "product": "60b79d8c5fca174234f67105",
+    "rating": 5,
+    "title": "Highly Recommend!",
+    "text": "I highly recommend this refrigerator. It's a game-changer for keeping food fresh."
+  },
+  {
+    "_id": "60b79d8c5fca174234f6711a",
+    "user": "612e2711b33c8b89fc65c694",
+    "product": "60b79d8c5fca174234f67106",
+    "rating": 3,
+    "title": "Average Shirt",
+    "text": "This men's shirt is average. It's comfortable but not very stylish."
+  },
+  {
+    "_id": "60b79d8c5fca174234f6711b",
+    "user": "612e2711b33c8b89fc65c695",
+    "product": "60b79d8c5fca174234f67107",
+    "rating": 4,
+    "title": "Great Pants!",
+    "text": "These men's pants are great. Comfortable and stylish for any occasion."
+  },
+  {
+    "_id": "60b79d8c5fca174234f6711c",
+    "user": "612e2711b33c8b89fc65c696",
+    "product": "60b79d8c5fca174234f67108",
+    "rating": 5,
+    "title": "Excellent Shoes!",
+    "text": "These men's shoes are excellent in quality and style. I'm very satisfied."
+  },
+  {
+    "_id": "60b79d8c5fca174234f6711d",
+    "user": "612e2711b33c8b89fc65c692",
+    "product": "60b79d8c5fca174234f67109",
+    "rating": 4,
+    "title": "Versatile Dress",
+    "text": "This women's dress is versatile and can be dressed up or down. Love it!"
+  },
+  {
+    "_id": "60b79d8c5fca174234f6711e",
+    "user": "612e2711b33c8b89fc65c693",
+    "product": "60b79d8c5fca174234f6710a",
+    "rating": 5,
+    "title": "Comfortable Top!",
+    "text": "This women's top is not only stylish but also very comfortable to wear."
+  },
+  {
+    "_id": "60b79d8c5fca174234f6711f",
+    "user": "612e2711b33c8b89fc65c694",
+    "product": "60b79d8c5fca174234f6710b",
+    "rating": 3,
+    "title": "Chic Shoes",
+    "text": "These women's shoes look chic but are not as comfortable as expected."
+  },
+  {
+    "_id": "60b79d8c5fca174234f67120",
+    "user": "612e2711b33c8b89fc65c695",
+    "product": "60b79d8c5fca174234f67102",
+    "rating": 4,
+    "title": "Solid Performance!",
+    "text": "This smartphone delivers solid performance. It's a reliable choice."
+  }
+]

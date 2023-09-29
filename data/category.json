@@ -2,6 +2,7 @@
   {
     "_id": "60b79d8c5fca174234f670e2",
     "name": "Electronics",
+    "image": "electronics.png",
     "description": "Explore the latest electronic gadgets and devices. From smartphones to smart home appliances, find everything here.",
     "parentCategory": null,
     "subcategories": ["60b79d8c5fca174234f670e9", "60b79d8c5fca174234f670ea"]
@@ -9,6 +10,7 @@
   {
     "_id": "60b79d8c5fca174234f670e3",
     "name": "Clothing",
+    "image": "clothing.png",
     "description": "Upgrade your wardrobe with a wide range of clothing and apparel options. Stay fashionable and comfortable.",
     "parentCategory": null,
     "subcategories": ["60b79d8c5fca174234f670eb", "60b79d8c5fca174234f670ec"]
@@ -16,6 +18,7 @@
   {
     "_id": "60b79d8c5fca174234f670e4",
     "name": "Home & Kitchen",
+    "image": "home-and-kitchen.png",
     "description": "Enhance your living space with quality home and kitchen products. Discover stylish and functional items for your home.",
     "parentCategory": null,
     "subcategories": ["60b79d8c5fca174234f670ed", "60b79d8c5fca174234f670ee"]
@@ -23,6 +26,7 @@
   {
     "_id": "60b79d8c5fca174234f670e5",
     "name": "Books",
+    "image": "books.png",
     "description": "Dive into the world of literature with our extensive collection of books. From bestsellers to classics, find your next read here.",
     "parentCategory": null,
     "subcategories": ["60b79d8c5fca174234f670ef", "60b79d8c5fca174234f670f0"]
@@ -30,6 +34,7 @@
   {
     "_id": "60b79d8c5fca174234f670e6",
     "name": "Sports & Outdoors",
+    "image": "sports-and-outdoors.png",
     "description": "Fuel your passion for sports and outdoor activities. Browse a variety of equipment and gear for your favorite pursuits.",
     "parentCategory": null,
     "subcategories": ["60b79d8c5fca174234f670f1", "60b79d8c5fca174234f670f2"]
@@ -37,6 +42,7 @@
   {
     "_id": "60b79d8c5fca174234f670e7",
     "name": "Beauty & Personal Care",
+    "image": "Beauty-and-Personal-Care.png",
     "description": "Take care of your skin, hair, and overall beauty. Discover a range of grooming and personal care products.",
     "parentCategory": null,
     "subcategories": ["60b79d8c5fca174234f670f3", "60b79d8c5fca174234f670f4"]
@@ -44,6 +50,7 @@
   {
     "_id": "60b79d8c5fca174234f670e8",
     "name": "Toys & Games",
+    "image": "Beauty-and-Personal-Care.png",
     "description": "Find joy in playtime with our selection of toys and games. From educational toys to board games, fun awaits.",
     "parentCategory": null,
     "subcategories": ["60b79d8c5fca174234f670f5", "60b79d8c5fca174234f670f6"]
@@ -52,6 +59,7 @@
   {
     "_id": "60b79d8c5fca174234f670e9",
     "name": "Smartphones",
+    "image": "Beauty-and-Personal-Care.png",
     "description": "Discover the latest smartphones with cutting-edge technology.",
     "parentCategory": "60b79d8c5fca174234f670e2",
     "subcategories": [],
@@ -60,6 +68,7 @@
   {
     "_id": "60b79d8c5fca174234f670ea",
     "name": "Home Appliances",
+    "image": "Beauty-and-Personal-Care.png",
     "description": "Upgrade your home with smart appliances for convenience and energy efficiency.",
     "parentCategory": "60b79d8c5fca174234f670e2",
     "subcategories": [],
@@ -68,6 +77,7 @@
   {
     "_id": "60b79d8c5fca174234f670eb",
     "name": "Men's Clothing",
+    "image": "Beauty-and-Personal-Care.png",
     "description": "Shop for a wide range of men's clothing styles, from casual to formal wear.",
     "parentCategory": "60b79d8c5fca174234f670e3",
     "subcategories": [],
@@ -80,6 +90,7 @@
   {
     "_id": "60b79d8c5fca174234f670ec",
     "name": "Women's Clothing",
+    "image": "Beauty-and-Personal-Care.png",
     "description": "Explore fashionable clothing options for women, including dresses, tops, and more.",
     "parentCategory": "60b79d8c5fca174234f670e3",
     "subcategories": [],
@@ -92,6 +103,7 @@
   {
     "_id": "60b79d8c5fca174234f670ed",
     "name": "Cookware",
+    "image": "cookwware.png",
     "description": "Equip your kitchen with high-quality cookware and kitchen gadgets.",
     "parentCategory": "60b79d8c5fca174234f670e4",
     "subcategories": [],
@@ -100,6 +112,7 @@
   {
     "_id": "60b79d8c5fca174234f670ee",
     "name": "Furniture",
+    "image": "Beauty-and-Personal-Care.png",
     "description": "Furnish your home with stylish and functional furniture pieces.",
     "parentCategory": "60b79d8c5fca174234f670e4",
     "subcategories": [],
@@ -108,6 +121,7 @@
   {
     "_id": "60b79d8c5fca174234f670ef",
     "name": "Fiction",
+    "image": "Beauty-and-Personal-Care.png",
     "description": "Immerse yourself in fictional worlds with captivating novels and stories.",
     "parentCategory": "60b79d8c5fca174234f670e5",
     "subcategories": [],
@@ -116,6 +130,7 @@
   {
     "_id": "60b79d8c5fca174234f670f0",
     "name": "Non-Fiction",
+    "image": "Beauty-and-Personal-Care.png",
     "description": "Expand your knowledge with informative non-fiction books on various subjects.",
     "parentCategory": "60b79d8c5fca174234f670e5",
     "subcategories": [],

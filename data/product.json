@@ -1,0 +1,122 @@
+[
+  {
+    "_id": "60b79d8c5fca174234f67102",
+    "name": "Smartphone X",
+    "description": "Discover the latest smartphone with cutting-edge technology.",
+    "slug": "smartphone-x",
+    "price": 799.99,
+    "category": "60b79d8c5fca174234f670e9",
+    "image": "smartphone-x.jpg",
+    "stockQuantity": 100,
+    "size": "Medium",
+    "color": "Black"
+  },
+  {
+    "_id": "60b79d8c5fca174234f67103",
+    "name": "Smartphone Y",
+    "description": "Experience the future with our flagship smartphone.",
+    "slug": "smartphone-y",
+    "price": 899.99,
+    "category": "60b79d8c5fca174234f670e9",
+    "image": "smartphone-y.jpg",
+    "stockQuantity": 50,
+    "size": "Large",
+    "color": "Silver"
+  },
+  {
+    "_id": "60b79d8c5fca174234f67104",
+    "name": "Refrigerator A",
+    "description": "Upgrade your kitchen with a spacious and energy-efficient refrigerator.",
+    "slug": "refrigerator-a",
+    "price": 1099.99,
+    "category": "60b79d8c5fca174234f670ea",
+    "image": "refrigerator-a.jpg",
+    "stockQuantity": 25,
+    "size": "Standard",
+    "color": "White"
+  },
+  {
+    "_id": "60b79d8c5fca174234f67105",
+    "name": "Refrigerator B",
+    "description": "Keep your groceries fresh with this high-capacity refrigerator.",
+    "slug": "refrigerator-b",
+    "price": 1199.99,
+    "category": "60b79d8c5fca174234f670ea",
+    "image": "refrigerator-b.jpg",
+    "stockQuantity": 30,
+    "size": "Large",
+    "color": "Stainless Steel"
+  },
+  {
+    "_id": "60b79d8c5fca174234f67106",
+    "name": "Men's Shirt A",
+    "description": "A classic men's shirt for any occasion.",
+    "slug": "mens-shirt-a",
+    "price": 39.99,
+    "category": "60b79d8c5fca174234f670eb",
+    "image": "mens-shirt-a.jpg",
+    "stockQuantity": 75,
+    "size": "Medium",
+    "color": "Blue"
+  },
+  {
+    "_id": "60b79d8c5fca174234f67107",
+    "name": "Men's Pants A",
+    "description": "Comfortable and stylish pants for men.",
+    "slug": "mens-pants-a",
+    "price": 49.99,
+    "category": "60b79d8c5fca174234f670eb",
+    "image": "mens-pants-a.jpg",
+    "stockQuantity": 60,
+    "size": "Large",
+    "color": "Black"
+  },
+  {
+    "_id": "60b79d8c5fca174234f67108",
+    "name": "Men's Shoes A",
+    "description": "Durable and fashionable shoes for men.",
+    "slug": "mens-shoes-a",
+    "price": 79.99,
+    "category": "60b79d8c5fca174234f670eb",
+    "image": "mens-shoes-a.jpg",
+    "stockQuantity": 100,
+    "size": "US 10",
+    "color": "Brown"
+  },
+  {
+    "_id": "60b79d8c5fca174234f67109",
+    "name": "Women's Dress A",
+    "description": "An elegant and versatile dress for women.",
+    "slug": "womens-dress-a",
+    "price": 69.99,
+    "category": "60b79d8c5fca174234f670ec",
+    "image": "womens-dress-a.jpg",
+    "stockQuantity": 45,
+    "size": "Small",
+    "color": "Red"
+  },
+  {
+    "_id": "60b79d8c5fca174234f6710a",
+    "name": "Women's Top A",
+    "description": "A stylish and comfortable top for women.",
+    "slug": "womens-top-a",
+    "price": 29.99,
+    "category": "60b79d8c5fca174234f670ec",
+    "image": "womens-top-a.jpg",
+    "stockQuantity": 80,
+    "size": "Medium",
+    "color": "White"
+  },
+  {
+    "_id": "60b79d8c5fca174234f6710b",
+    "name": "Women's Shoes A",
+    "description": "Fashionable and chic shoes for women.",
+    "slug": "womens-shoes-a",
+    "price": 89.99,
+    "category": "60b79d8c5fca174234f670ec",
+    "image": "womens-shoes-a.jpg",
+    "stockQuantity": 60,
+    "size": "US 8",
+    "color": "Black"
+  }
+]
