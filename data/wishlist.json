@@ -1,0 +1,61 @@
+[
+  {
+    "_id": "612e2711b33c8b89fc65c598",
+    "user": "612e2711b33c8b89fc65c691",
+    "title": "My Dress wishlist",
+    "type": "wishlist",
+    "products": ["60b79d8c5fca174234f67102"]
+  },
+  {
+    "_id": "612e2711b33c8b89fc65c599",
+    "user": "612e2711b33c8b89fc65c692",
+    "title": "My Dress wishlist",
+    "products": ["60b79d8c5fca174234f67102"]
+  },
+  {
+    "_id": "612e2711b33c8b89fc65c595",
+    "user": "612e2711b33c8b89fc65c690",
+    "title": "My Dress wishlist",
+    "type": "wishlist",
+    "products": ["60b79d8c5fca174234f67102"]
+  },
+  {
+    "_id": "612e2711b33c8b89fc65c594",
+    "user": "612e2711b33c8b89fc65c68c",
+    "title": "My Dress wishlist",
+    "products": ["60b79d8c5fca174234f67102"]
+  },
+  {
+    "_id": "612e2711b33c8b89fc65c593",
+    "user": "612e2711b33c8b89fc65c68d",
+    "title": "My Dress wishlist",
+    "type": "wishlist",
+    "products": ["60b79d8c5fca174234f67102"]
+  },
+  {
+    "_id": "612e2711b33c8b89fc65c592",
+    "user": "612e2711b33c8b89fc65c68a",
+    "title": "My Dress wishlist",
+    "products": ["60b79d8c5fca174234f67102"]
+  },
+  {
+    "_id": "612e2711b33c8b89fc65c591",
+    "user": "612e2711b33c8b89fc65c696",
+    "title": "My Dress wishlist",
+    "type": "wishlist",
+    "products": ["60b79d8c5fca174234f67102"]
+  },
+  {
+    "_id": "612e2711b33c8b89fc65c596",
+    "user": "612e2711b33c8b89fc65c695",
+    "title": "My Dress wishlist",
+    "products": ["60b79d8c5fca174234f67102"]
+  },
+  {
+    "_id": "612e2711b33c8b89fc65c597",
+    "user": "612e2711b33c8b89fc65c693",
+    "title": "My Dress wishlist",
+    "type": "wishlist",
+    "products": ["60b79d8c5fca174234f67102"]
+  }
+]
