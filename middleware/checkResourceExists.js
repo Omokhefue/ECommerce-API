@@ -46,7 +46,6 @@ exports.checkResourceExists = (resourceType, user) => {
     if (user) {
       query.user = req.user._id;
     }
-console.log(query)
     const Model = getResourceModel(resourceType);
 
     if (!Model) {
@@ -60,7 +59,6 @@ console.log(query)
     if (!resource) {
       return next(new ErrorResponse(`${resourceType} not found`, 404));
     }
-    console.log("from check resource", resource);
     req.resource = resource;
     next();
   });

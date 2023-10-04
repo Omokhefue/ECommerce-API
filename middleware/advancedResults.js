@@ -20,7 +20,6 @@ exports.advancedResults =
     }
 
     if (req.query.select) {
-      console.log(1)
       const fields = req.query.select.split(",").join(" ");
       query = query.select(fields);
     }
