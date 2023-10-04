@@ -9,7 +9,8 @@
     "image": "smartphone-x.jpg",
     "stockQuantity": 100,
     "size": "Medium",
-    "color": "Black"
+    "color": "Black",
+    "user": "612e2708b33c8b89fc65c68a" 
   },
   {
     "_id": "60b79d8c5fca174234f67103",
@@ -21,7 +22,8 @@
     "image": "smartphone-y.jpg",
     "stockQuantity": 50,
     "size": "Large",
-    "color": "Silver"
+    "color": "Silver",
+    "user": "612e2708b33c8b89fc65c68b" 
   },
   {
     "_id": "60b79d8c5fca174234f67104",
@@ -33,7 +35,8 @@
     "image": "refrigerator-a.jpg",
     "stockQuantity": 25,
     "size": "Standard",
-    "color": "White"
+    "color": "White",
+    "user": "612e2708b33c8b89fc65c68c" 
   },
   {
     "_id": "60b79d8c5fca174234f67105",
@@ -45,7 +48,8 @@
     "image": "refrigerator-b.jpg",
     "stockQuantity": 30,
     "size": "Large",
-    "color": "Stainless Steel"
+    "color": "Stainless Steel",
+    "user": "612e2708b33c8b89fc65c68d" 
   },
   {
     "_id": "60b79d8c5fca174234f67106",
@@ -57,7 +61,8 @@
     "image": "mens-shirt-a.jpg",
     "stockQuantity": 75,
     "size": "Medium",
-    "color": "Blue"
+    "color": "Blue",
+    "user": "612e2708b33c8b89fc65c68a" 
   },
   {
     "_id": "60b79d8c5fca174234f67107",
@@ -69,7 +74,8 @@
     "image": "mens-pants-a.jpg",
     "stockQuantity": 60,
     "size": "Large",
-    "color": "Black"
+    "color": "Black",
+    "user": "612e2708b33c8b89fc65c68b" 
   },
   {
     "_id": "60b79d8c5fca174234f67108",
@@ -81,7 +87,8 @@
     "image": "mens-shoes-a.jpg",
     "stockQuantity": 100,
     "size": "US 10",
-    "color": "Brown"
+    "color": "Brown",
+    "user": "612e2708b33c8b89fc65c68c" 
   },
   {
     "_id": "60b79d8c5fca174234f67109",
@@ -93,7 +100,8 @@
     "image": "womens-dress-a.jpg",
     "stockQuantity": 45,
     "size": "Small",
-    "color": "Red"
+    "color": "Red",
+    "user": "612e2708b33c8b89fc65c68a" 
   },
   {
     "_id": "60b79d8c5fca174234f6710a",
@@ -105,7 +113,8 @@
     "image": "womens-top-a.jpg",
     "stockQuantity": 80,
     "size": "Medium",
-    "color": "White"
+    "color": "White",
+    "user": "612e2708b33c8b89fc65c68b" 
   },
   {
     "_id": "60b79d8c5fca174234f6710b",
@@ -117,6 +126,7 @@
     "image": "womens-shoes-a.jpg",
     "stockQuantity": 60,
     "size": "US 8",
-    "color": "Black"
+    "color": "Black",
+    "user": "612e2708b33c8b89fc65c68c" 
   }
 ]

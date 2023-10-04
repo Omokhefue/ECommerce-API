@@ -6,12 +6,13 @@ const {
   resendVerifyEmailOTP,
   logout,
   forgotPassword,
-  resetPassword,
+  resetPassword
 } = require("../controllers/auth");
 
 const { protect } = require("../middleware/auth");
 
 const router = express.Router();
+
 
 router.post("/signup", signup); //done
 router.post("/login", login); //done

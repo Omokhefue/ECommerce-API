@@ -4,6 +4,11 @@ const slugify = require("slugify");
 // Define the Product schema using mongoose.Schema
 const productSchema = new mongoose.Schema(
   {
+    user: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "User",
+      required: true,
+    },
     name: {
       type: String,
       required: true, // Product name is a required field
@@ -38,6 +43,7 @@ const productSchema = new mongoose.Schema(
     },
     size: String, // Optional product size
     color: String, // Optional product color
+    averageRating: Number,
   },
   { timestamps: true } // Adds createdAt and updatedAt timestamps
 );

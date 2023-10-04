@@ -8,13 +8,13 @@ async function processImageFile(req, res, next, resource, oldImageFile) {
   let imageFile = req.files.image;
 
   const fileExtension = imageFile.name.split(".").pop(); // getting the image extension
-  const allowedExtensions = ["jpg", "jpeg", "png", "gif"]; // types of allowed image types
+  const allowedExtensions = ["jpg", "jpeg", "png"]; // types of allowed image types
 
   // checking if uploaded image file was of the correct format
   if (!allowedExtensions.includes(fileExtension)) {
     next(
       new ErrorResponse(
-        "Invalid file type. Please upload a valid image file (.jpg, .jpeg, .png, .gif).",
+        "Invalid file type. Please upload a valid image file (.jpg, .jpeg, .png).",
         422
       )
     );

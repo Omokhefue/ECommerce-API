@@ -11,7 +11,7 @@ exports.getProduct = asyncHandler(async (req, res, next) => {
   const product = await Product.findOne({
     slug: req.params.productSlug,
     slugCounter: req.params.productSlugCounter,
-  });
+  })
   res.status(200).json({ success: true, data: product });
 });
 

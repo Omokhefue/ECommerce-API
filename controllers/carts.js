@@ -1,6 +1,5 @@
 const asyncHandler = require("../middleware/async");
 const Cart = require("../models/Cart"); // Import your Cart model
-const Wishlist = require("../models/Wishlist"); // Import your Wishlist model
 const ErrorResponse = require("../utils/errorResponse");
 
 // Route to view the user's shopping cart

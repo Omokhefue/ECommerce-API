@@ -1,10 +1,12 @@
 const asyncHandler = require("../middleware/async");
 const User = require("../models/User");
+const passport = require("passport");
 
 const ErrorResponse = require("../utils/errorResponse");
 const { processImageFile } = require("../utils/imageFileUpload");
-const sendEmail = require('../utils/sendEmail');
+const sendEmail = require("../utils/sendEmail");
 const crypto = require("crypto");
+
 
 // POST /api/auth/signup: User registration.
 exports.signup = asyncHandler(async (req, res, next) => {
@@ -62,7 +64,6 @@ exports.verifyEmail = asyncHandler(async (req, res, next) => {
 // POST /api/auth/resend-otp: incase of an error when sending the first otp to verify email
 exports.resendVerifyEmailOTP = asyncHandler(async (req, res, next) => {
   const user = req.user;
-  console.log(user);
   if (!user) {
     return next(
       new ErrorResponse(`not authenticated to make a new otp request`, 403)
@@ -76,6 +77,13 @@ exports.resendVerifyEmailOTP = asyncHandler(async (req, res, next) => {
   });
 });
 exports.logout = asyncHandler(async (req, res, next) => {
+  // Check if the user is authenticated with Passport.js
+  if (req.isAuthenticated()) {
+    // If using Passport.js, clear the session or token
+    req.logout();
+    // You may need to clear other Passport-related data as well
+  }
+
   // set the token to null so user has to login to receive another token
   res.status(200).json({ message: "Logout successful", token: null });
 });
@@ -109,7 +117,6 @@ exports.forgotPassword = asyncHandler(async (req, res, next) => {
   } catch (err) {
     user.resetPasswordToken = undefined;
     user.resetPasswordExpire = undefined;
-console.log(err)
     await user.save({ validateBeforeSave: false });
     return next(new ErrorResponse("Email could not be sent"));
   }

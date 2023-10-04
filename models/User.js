@@ -49,9 +49,6 @@ const UserSchema = new mongoose.Schema(
       default: "customer",
       required: true,
     },
-    wishlist: {
-      type: Array,
-    },
     address: {
       type: String,
     },

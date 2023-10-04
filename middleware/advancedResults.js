@@ -20,6 +20,7 @@ exports.advancedResults =
     }
 
     if (req.query.select) {
+      console.log(1)
       const fields = req.query.select.split(",").join(" ");
       query = query.select(fields);
     }
@@ -27,7 +28,7 @@ exports.advancedResults =
       const sortBy = req.query.sort.split(",").join(" ");
       query = query.sort(sortBy);
     } else {
-      query = query.sort("-createdt");
+      query = query.sort("-createdAt");
     }
 
     let page = parseInt(req.query.page, 10) || 1;

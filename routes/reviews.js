@@ -29,7 +29,7 @@ router.get(
 );
 
 // Route to get a specific review by its ID
-router.get("/:id", getReview);
+router.get("/:reviewId", checkResourceExists("review"), getReview);
 
 // Route to add a new review for a product identified by its slug
 router.post(
@@ -42,9 +42,10 @@ router.post(
 
 // Route to delete a review by its ID
 router.delete(
-  "/:id",
+  "/:reviewId",
   protect, // Ensure user is authenticated
   authorize("customer", "site-owner"), // Ensure user has the "customer" or "site-owner" role
+  checkResourceExists("review"),
   checkAuthorization, // Check authorization to delete the review
   deleteReview // Delete the review
 );

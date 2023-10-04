@@ -8,12 +8,9 @@ const { processImageFile, deleteImage } = require("../utils/imageFileUpload");
 const bcrypt = require("bcryptjs");
 
 exports.updateDetails = asyncHandler(async (req, res, next) => {
-  const user = await User.findById(req.params.UserId);
+  const user = await User.find(req.params.userSlug);
 
-  const firstname = req.body.firstname;
-  const lastname = req.body.lastname;
-  const email = req.body.email;
-
+  const { firstname, lastname, email } = req.body;
   if (user.id !== req.user.id) {
     return next(
       new ErrorResponse(
@@ -61,11 +58,11 @@ exports.updateDetails = asyncHandler(async (req, res, next) => {
 });
 exports.updateCustomerRoleToAdmin = asyncHandler(async (req, res, next) => {
   // Find the user by ID
-  const user = await User.findById(req.params.UserId);
+  const user = await User.find(req.params.userSlug);
   if (user.id !== req.user.id) {
     return next(
       new ErrorResponse(
-        `User ${req.user._id} is not authorized to make changes to resource ${user._id}`,
+        `User ${req.user.slug} is not authorized to make changes to resource ${user.slug}`,
         403
       )
     );
@@ -83,12 +80,12 @@ exports.updatePassword = asyncHandler(async (req, res, next) => {
   const newPassword = req.body.newPassword;
   const currentPassword = req.body.currentPassword;
 
-  const user = await User.findById(req.params.UserId).select("+password");
+  const user = await User.find(req.params.userSlug).select("+password");
 
   if (user.id !== req.user.id) {
     return next(
       new ErrorResponse(
-        `User ${req.user._id} is not authorized to make changes to resource ${user._id}`,
+        `User ${req.user.slug} is not authorized to make changes to resource ${user.slug}`,
         403
       )
     );
@@ -112,28 +109,22 @@ exports.updatePassword = asyncHandler(async (req, res, next) => {
 });
 // done
 exports.getLoggedInUser = asyncHandler(async (req, res, next) => {
-  const user = await User.findById(req.user.id);
+  const user = req.user
   res.status(200).json({ userMe: user });
 });
 // done
 exports.getAllUsers = asyncHandler(async (req, res, next) => {
-  const users = await User.find({
-    _id: { $nin: req.user.blockedUsers },
-  }).select("-blockedUsers");
-
-  res.status(200).json({ numberOfUsers: users.length, users });
+  res.status(200).json(res.advancedResults);
 });
 // done
 exports.getAllUsersPublic = asyncHandler(async (req, res, next) => {
-  const users = await User.find().select("-blockedUsers");
-
-  res.status(200).json({ numberOfUsers: users.length, users });
+  res.status(200).json(res.advancedResults);
 });
 // done
 exports.getCustomerOrAdminForPublic = asyncHandler(async (req, res, next) => {
-  const userIdToRetrieve = req.params.UserId;
+  const userToRetrieve = req.params.userSlug;
 
-  const user = await User.findById(userIdToRetrieve).select("-blockedUsers");
+  const user = await User.findById(userToRetrieve).select("-blockedUsers");
 
   res.status(200).json({ user });
 });
@@ -141,10 +132,10 @@ exports.getCustomerOrAdminForPublic = asyncHandler(async (req, res, next) => {
 exports.getCustomerOrAdmin = asyncHandler(async (req, res, next) => {
   const currentUser = req.user; // Get the current user
 
-  const userIdToRetrieve = req.params.UserId;
+  const userToRetrieve = req.params.userSlug;
   // Check if the user to be retrieved is in the blockedUsers array of the current user
   const isBlocked = currentUser.blockedUsers
-    .includes(userIdToRetrieve)
+    .includes(userToRetrieve)
     .select("-blockedUsers");
 
   if (isBlocked) {
@@ -152,7 +143,7 @@ exports.getCustomerOrAdmin = asyncHandler(async (req, res, next) => {
     return res.status(403).json({ success: false, message: "User is blocked" });
   }
 
-  const user = await User.findById(userIdToRetrieve).select("-blockedUsers");
+  const user = await User.findById(userToRetrieve).select("-blockedUsers");
 
   res.status(200).json({ user });
 });
@@ -164,25 +155,22 @@ exports.getSiteOwner = asyncHandler(async (req, res, next) => {
 });
 // done
 exports.deleteUser = asyncHandler(async (req, res, next) => {
-  if (
-    req.user.id.toString() !== req.params.UserId &&
-    req.user.role !== "site-owner"
-  ) {
+  if (req.user.slug !== req.params.userSlug && req.user.role !== "site-owner") {
     return next(
       new ErrorResponse(
-        `User ${req.user._id} is not authorized to make changes to resource ${req.params.UserId}`,
+        `User ${req.user.slug} is not authorized to make changes to resource ${req.params.slug}`,
         403
       )
     );
   }
-  const userId = req.params.UserId;
+  const userSlug = req.params.userSlug;
   if (req.user.image) {
     const userImage = req.resource.image;
 
     await deleteImage("users", userImage);
   }
 
-  await User.deleteOne({ _id: userId });
+  await User.deleteOne({ slug: userSlug });
   res.status(200).json({ success: true, msg: "deleted", token: null });
 });
 exports.getAllCustomers = asyncHandler(async (req, res, next) => {
@@ -201,40 +189,40 @@ const sendTokenResponse = async (user, statusCode, res) => {
   res.status(statusCode).json({
     success: true,
     token,
-    user: user._id,
+    user: user.slug,
   });
 };
 
 exports.blockUser = asyncHandler(async (req, res, next) => {
-  const userIdToBlock = req.params.UserId; // Get the ID of the user to be blocked
+  const userToBlock = req.params.userSlug; // Get the ID of the user to be blocked
   const currentUser = req.user; // Get the current user
 
-  if (currentUser.blockedUsers.includes(userIdToBlock)) {
+  if (currentUser.blockedUsers.includes(userToBlock)) {
     return next(
       new ErrorResponse(
-        `user ${currentUser._id} has already blocked user ${userIdToBlock}`,
+        `user ${currentUser.slug} has already blocked user ${userToBlock}`,
         401
       )
     );
   }
 
   // Add the user's ID to the current user's blockedUsers array
-  currentUser.blockedUsers.push(userIdToBlock);
+  currentUser.blockedUsers.push(userToBlock);
   await currentUser.save();
-  console.log(currentUser);
   res.status(200).json({
     success: true,
-    message: `User ${userIdToBlock}, blocked successfully`,
+    message: `User ${userToBlock}, blocked successfully`,
   });
 });
 exports.unblockUser = asyncHandler(async (req, res, next) => {
-  const userIdToUnblock = req.params.UserId; // Get the ID of the user to be blocked
+  const userSlugToBlock = req.params.userSlug; // Get the ID of the user to be blocked
   const currentUser = req.user; // Get the current user
 
-  if (!currentUser.blockedUsers.includes(userIdToUnblock)) {
+  const userToBlock = await User.findOne({ slug: userSlugToBlock });
+  if (!currentUser.blockedUsers.includes(userToBlock._id)) {
     return next(
       new ErrorResponse(
-        `user ${currentUser._id} has not blocked user ${userIdToUnblock}`,
+        `user ${currentUser._id} has not blocked user ${userSlugToBlock}`,
         401
       )
     );
@@ -242,12 +230,11 @@ exports.unblockUser = asyncHandler(async (req, res, next) => {
 
   // Add the user's ID to the current user's blockedUsers array
   currentUser.blockedUsers = currentUser.blockedUsers.filter(
-    (userId) => userId.toString() !== userIdToUnblock
+    (userId) => userId.toString() !== userToBlock._id.toString()
   );
   await currentUser.save();
   res.status(200).json({
     success: true,
-    message: `User ${userIdToUnblock}, unblocked successfully`,
+    message: `User ${userSlugToBlock}, unblocked successfully`,
   });
 });
-

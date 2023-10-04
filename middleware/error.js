@@ -1,8 +1,7 @@
 const ErrorResponse = require("../utils/errorResponse");
 const errorHandler = (err, req, res, next) => {
   let error = { ...err };
-
-  
+  console.log(err);
   error.message = err.message;
   // validation error on save
   if (err.name === "ValidationError") {
@@ -12,7 +11,12 @@ const errorHandler = (err, req, res, next) => {
   }
   // duplicate field entry
   if (err.code === 11000) {
-    error = new ErrorResponse("that email already exists", 400);
+    error = new ErrorResponse(
+      `${Object.keys(err.keyValue)} : ${Object.values(
+        err.keyValue
+      )} already exists`,
+      400
+    );
   }
   // bad mongoose ObjectId
   if (err.name === "CastError") {
