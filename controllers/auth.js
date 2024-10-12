@@ -77,14 +77,7 @@ exports.resendVerifyEmailOTP = asyncHandler(async (req, res, next) => {
   });
 });
 exports.logout = asyncHandler(async (req, res, next) => {
-  // Check if the user is authenticated with Passport.js
-  if (req.isAuthenticated()) {
-    // If using Passport.js, clear the session or token
-    req.logout();
-    // You may need to clear other Passport-related data as well
-  }
 
-  // set the token to null so user has to login to receive another token
   res.status(200).json({ message: "Logout successful", token: null });
 });
 
